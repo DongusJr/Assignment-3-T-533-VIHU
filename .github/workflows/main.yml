@@ -36,4 +36,11 @@ jobs:
         run: npm install
         
       - name: Npm run tests
-        run: npm run test
+        run: npm run test:ci
+        
+      - name: Upload test results
+        uses: actions/upload-artifact@v2.3.1
+        with:
+          name: coverage # Todo, make name dynamic
+          path: coverage/
+          
