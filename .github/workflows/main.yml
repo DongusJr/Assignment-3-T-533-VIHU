@@ -72,5 +72,5 @@ jobs:
         run: npm install
           
       - name: ✅ TypeCheck
-        uses: andoshin11/typescript-error-reporter-action@v1.0.2
+        uses: iCrawl/action-tsc@v1
     
