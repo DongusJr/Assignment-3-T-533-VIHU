@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "strict": true,
-    "skipLibCheck": true,
+    "module": "es6",
+    "esModuleInterop": true,
+    "target": "es6",
     "moduleResolution": "node",
-    "types": ["node"],
-    "lib": ["ES2017"]
+    "sourceMap": true,
+    "outDir": "dist"
+    
   },
-  "include": ["src/**/*.ts"]
+  "include": ["./src/**/*"]
 }
