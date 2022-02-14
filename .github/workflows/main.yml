@@ -43,4 +43,18 @@ jobs:
         with:
           name: coverage # Todo, make name dynamic
           path: coverage/
-          
+  prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: 💅 Prettier
+        uses: creyD/prettier_action@v4.2
+        with:
+          # This part is also where you can pass other options, for example:
+          commit_message: Made prettier :)
+          prettier_options: --write **
+    
