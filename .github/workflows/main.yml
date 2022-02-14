@@ -44,6 +44,7 @@ jobs:
           name: coverage # Todo, make name dynamic
           path: coverage/
   prettier:
+    name: 💅 Prettier
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -57,4 +58,15 @@ jobs:
           # This part is also where you can pass other options, for example:
           commit_message: Made prettier :)
           prettier_options: --write **
+  typeCheck:
+    name: ✅ TypeCheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Setup Node
+        uses: actions/setup-node@v2.5.1
+        with:
+          node-version: 17
+      - name: ✅ TypeCheck
+        uses: andoshin11/typescript-error-reporter-action@v1.0.2
     
